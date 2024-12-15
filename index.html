@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وجهة ظفار | Wijha</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            text-align: right;
+        }
+
+        header {
+            background-color: #117533;
+            color: white;
+            padding: 20px;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        header img {
+            display: block;
+            margin: 0 auto;
+            max-width: 200px;
+        }
+
+        nav {
+            background-color: #196930;
+            padding: 10px;
+            display: flex;
+            justify-content: flex-start;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a.active {
+            background-color: #196930;
+        }
+
+        nav a:hover {
+            background-color: #165c2a;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #168038;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #168038;
+            color: white;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #168038;
+            transform: scale(1.05);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #271616;
+            color: white;
+            text-align: center;
+            padding: 1px 0;
+            font-size: 0.3em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #271616;
+            color: white;
+        }
+
+        .contact-link {
+            display: inline-block;
+            background-color: #196930;
+            color: white;
+            font-size: 1em;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-link:hover {
+            background-color: #165c2a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="main-title">مرحباً بك في وجهة | Wijha</h1>
+    </header>
+
+    <nav>
+        <a href="#home" class="active" onclick="showSection('home')">الصفحة الرئيسية</a>
+        <a href="#register" onclick="showSection('register')">تسجيل الدخول</a>
+        <a href="#developer" onclick="showSection('developer')">المطور</a>
+        <a href="#contact" onclick="showSection('contact')">للتواصل معنا</a>
+    </nav>
+
+    <div id="home" class="container">
+        <h2 id="about-title">من نحن؟</h2>
+        <p id="about-text">
+            منصة وجهة | Wijha هي منصة تقوم بجمع المرشدين السياحيين في محافظة ظفار لتقديم خدماتهم لزوار المحافظة إذ تعمل المنصة كحلقة وصل بين المرشدين السياحيين المحليين من شباب المحافظة وزوار المحافظة في مختلف المواسم وتحديدًا موسم خريف ظفار.
+        </p>
+
+        <h2 id="serve-title">كيف تخدم وجهة | Wijha المحافظة؟</h2>
+        <p id="serve-text">
+            تخدم المنصة المحافظة من خلال تقليل حجم البطالة، حيث أن جميع المنتسبين إليها هم شباب عمانيين من أهل المحافظة باحثين عن عمل وتقوم المنصة أيضًا بتنظيم العمل الإرشادي السياحي في المحافظة.
+        </p>
+        <p>
+            وكذلك، فإن المنصة تعمل على توزيع السياح على المحافظة من خلال خططها التي تقدمها للمستخدمين والباقات السياحية، بدلا عن تركزهم في أماكن معينة مما يسبب في تعطيل حركة السير ويساهم في الإختناق المروري وشلل بعض المناطق السكنية.
+        </p>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="#register" class="btn" onclick="showSection('register')">ابدأ</a>
+        </div>
+    </div>
+
+    <div id="register" class="container hidden">
+        <h2>تسجيل الدخول</h2>
+        <button class="btn" onclick="showForm('visitorForm')">زائر المحافظة</button>
+        <button class="btn" onclick="showForm('guideForm')">دليل سياحي/مرشد سياحي</button>
+
+        <div id="visitorForm" class="hidden">
+            <h3>تسجيل زائر</h3>
+            <form onsubmit="return submitVisitor(event)">
+                <label>رقم الهاتف:</label>
+                <input type="tel" placeholder="أدخل رقم الهاتف" required>
+
+                <label>الجنسية:</label>
+                <select required>
+                    <option value="">اختر جنسيتك</option>
+                    <option value="عماني">عماني</option>
+                    <option value="إماراتي">إماراتي</option>
+                    <option value="سعودي">سعودي</option>
+                    <option value="يمني">يمني</option>
+                    <option value="اخر">اخر</option>
+                </select>
+
+                <label>وثيقة إثبات الشخصية:</label>
+                <input type="file" accept="image/*,.pdf" required>
+
+                <button class="btn" type="submit">إرسال</button>
+            </form>
+        </div>
+
+        <div id="guideForm" class="hidden">
+            <h3>تسجيل دليل سياحي</h3>
+            <form onsubmit="return submitGuide(event)">
+                <label>رقم الهاتف:</label>
+                <input type="tel" placeholder="أدخل رقم الهاتف" required>
+                <label>إثبات الجنسية:</label>
+                <input type="file" accept="image/*,.pdf" required>
+                <label>نوع الخدمة:</label>
+                <select required>
+                    <option value="">اختر نوع الخدمة</option>
+                    <option value="مرشد سياحي">مرشد سياحي</option>
+                    <option value="مترجم">مترجم</option>
+                    <option value="سائق">سائق</option>
+                    <option value="أكثر من خدمة">أكثر من خدمة</option>
+               </select>
+                <button class="btn" type="submit">إرسال</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="developer" class="container hidden">
+        <h2>المطور</h2>
+        <form id="devLogin" onsubmit="return loginDev(event)">
+            <label>اسم المطور:</label>
+            <input type="text" id="devName" required>
+
+            <label>كلمة المرور:</label>
+            <input type="password" id="devPass" required>
+
+
+            <button class="btn" type="submit">دخول</button>
+        </form>
+
+        <div id="devData" class="hidden">
+            <h3>بيانات المسجلين</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>نوع المستخدم</th>
+                        <th>البيانات</th>
+                        <th>النتيجة</th>
+                    </tr>
+                </thead>
+                <tbody id="userData"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="contact" class="container hidden">
+        <h2>للتواصل معنا</h2>
+        <p>يمكنك التواصل معنا عبر الروابط التالية:</p>
+        <a href="https://www.instagram.com/wijha._om?igsh=cm4ycXNlc2Yyc201" class="contact-link" target="_blank">إنستغرام</a>
+        <a href="https://wa.me/96895517577" class="contact-link" target="_blank">واتساب: 95517577</a>
+        <a href="https://wa.me/96898154157" class="contact-link" target="_blank">واتساب: 98154157</a>
+    </div>
+
+    <footer>
+        <p id="footer-text">© 2024 منصة وجهة | وجهتك الأفضل، خدمتك الأروع. جميع الحقوق محفوظة. للتواصل: </p>
+    </footer>
+
+    <script>
+        const users = [];
+
+        function showSection(sectionId) {
+            document.querySelectorAll('.container').forEach(section => section.classList.add('hidden'));
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+
+        function showForm(formId) {
+            document.querySelectorAll('#register > div').forEach(form => form.classList.add('hidden'));
+            document.getElementById(formId).classList.remove('hidden');
+        }
+
+        function submitVisitor(event) {
+            event.preventDefault();
+            alert('تم تسجيل بياناتك بنجاح ✅. سيتم الرد عليك قريباً.');
+            users.push({ type: 'زائر المحافظة', data: 'بيانات مدخلة' });
+            showSection('home');
+        }
+
+        function submitGuide(event) {
+            event.preventDefault();
+            alert('تم تسجيل بياناتك كدليل سياحي بنجاح. سيتم الرد عليك قريباً.');
+            users.push({ type: 'دليل سياحي', data: 'بيانات مدخلة', result: '---' });
+        }
+
+        function loginDev(event) {
+            event.preventDefault();
+            const name = document.getElementById('devName').value;
+            const pass = document.getElementById('devPass').value;
+
+            if (name === 'ADMIN' && pass === 'Ss909121') {
+                document.getElementById('devLogin').classList.add('hidden');
+                document.getElementById('devData').classList.remove('hidden');
+                populateTable();
+            } else {
+                alert('بيانات المطور غير صحيحة!');
+            }
+        }
+
+        function populateTable() {
+            const tableBody = document.getElementById('userData');
+            tableBody.innerHTML = users
+                .map(user => `<tr><td>${user.type}</td><td>${user.data}</td><td>${user.result || '---'}</td></tr>`)
+                .join('');
+        }
+    </script>
+</body>
+</html>
